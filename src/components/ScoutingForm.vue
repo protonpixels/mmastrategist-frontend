@@ -271,9 +271,11 @@ export default {
     async loadOptions() {
       try {
         const [positionsRes, footRes, leaguesRes] = await Promise.all([
-          axios.get("/api/positions"),
-          axios.get("/api/foot_options"),
-          axios.get("/api/leagues"),
+          axios.get("https://altablastar-backend.onrender.com/api/positions"),
+          axios.get(
+            "https://altablastar-backend.onrender.com/api/foot_options",
+          ),
+          axios.get("https://altablastar-backend.onrender.com/api/leagues"),
         ]);
         this.positions = positionsRes.data;
         this.footOptions = footRes.data;
