@@ -285,10 +285,7 @@ export default {
       this.result = null;
 
       try {
-        const response = await axios.post(
-          "https://mmastrategist-backend.onrender.com/api/ufc/predict",
-          this.form,
-        );
+        const response = await axios.post("/api/ufc/predict", this.form);
         this.result = response.data;
         console.log(result);
       } catch (error) {
