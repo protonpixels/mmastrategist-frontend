@@ -13,7 +13,7 @@ export default defineConfig({
     port: 8000,
     proxy: {
       "/api": {
-        target: "https://mmastrategistg-backend.onrender.com",
+        target: "https://mmastrategistg-backend.onrender.com/",
         changeOrigin: true,
       },
     },
